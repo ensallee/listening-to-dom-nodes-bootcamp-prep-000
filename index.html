@@ -50,4 +50,12 @@
   input.addEventListener('mouseover', function(event){
     alert("This is where you write stuff!")
   });
+  
+  let divs=document.querySelectorAll('div');
+  function bubble(e){
+    alert(this.firstChild.nodeValue.trim() + 'is the name of this div')
+  }
+  for (let i=0; i<divs.length; i++){
+    divs[i].addEventListener('mouseover', bubble)
+  }
 </script>
